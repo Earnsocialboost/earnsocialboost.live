@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Earn Social Boost</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Earn Social Boost</h1>
+
+    <div id="auth">
+      <button onclick="login()">🔐 Login with Google</button>
+      <button onclick="twitterLogin()">🐦 Login with Twitter</button>
+    </div>
+
+    <div id="signup-form" style="display:none;">
+      <h2>Create Your Boost Account</h2>
+      <input id="name" placeholder="Name" />
+      <input id="username" placeholder="Username" />
+      <input id="country" placeholder="Country" />
+      <input id="twitter" placeholder="Twitter Username" />
+      <input id="telegram" placeholder="Telegram Username" />
+      <button onclick="submitSignupForm()">✅ Submit</button>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+      <h2>Welcome <span id="username"></span> 👋</h2>
+      <p>Points: <span id="points">0</span></p>
+      <p>Tokens: <span id="tokens">0</span></p>
+      <button onclick="logout()">🚪 Logout</button>
+    </div>
+
+    <footer>
+      <p>📣 Join Telegram: <a href="https://t.me/earnsocialboost" target="_blank">@earnsocialboost</a></p>
+    </footer>
+  </div>
+</body>
+</html>
