@@ -1,41 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Earn Social Boost</title>
   <link rel="stylesheet" href="style.css">
   <script type="module" src="firebase-config.js"></script>
   <script type="module" src="script.js"></script>
 </head>
 <body>
-  <div class="container">
-    <h1>🚀 Earn Social Boost</h1>
-
-    <div id="auth">
-      <button onclick="login()">🔐 Login with Google</button>
-      <button onclick="twitterLogin()">🐦 Login with Twitter</button>
-    </div>
-
-    <div id="signup-form" style="display:none;">
-      <h2>Create Your Boost Account</h2>
-      <input id="name" placeholder="Name" />
-      <input id="username" placeholder="Username" />
-      <input id="country" placeholder="Country" />
-      <input id="twitter" placeholder="Twitter Username" />
-      <input id="telegram" placeholder="Telegram Username" />
-      <button onclick="submitSignupForm()">✅ Submit</button>
-    </div>
-
-    <div id="dashboard" style="display:none;">
-      <h2>Welcome <span id="username"></span> 👋</h2>
-      <p>Points: <span id="points">0</span></p>
-      <p>Tokens: <span id="tokens">0</span></p>
-      <button onclick="logout()">🚪 Logout</button>
-    </div>
-
-    <footer>
-      <p>📣 Join Telegram: <a href="https://t.me/earnsocialboost" target="_blank">@earnsocialboost</a></p>
-    </footer>
+  <div class="navbar">
+    <button onclick="goTo('home')">🏠 Home</button>
+    <button onclick="goTo('earn')">💼 Earn Point</button>
+    <button onclick="convertPointsToTokens()">🔁 Point to Token</button>
+    <button onclick="getReferralLink()">👥 Referral</button>
+    <button onclick="topUpPoints()">💳 Top-up</button>
+    <button onclick="logout()">🚪 Log Out</button>
   </div>
+
+  <div id="auth">
+    <h1>Welcome to Earn Social Boost</h1>
+    <p>Login below to get started</p>
+    <button onclick="login()">🔐 Login with Google</button>
+    <button onclick="twitterLogin()">🐦 Login with Twitter</button>
+  </div>
+
+  <div id="dashboard" style="display:none;">
+    <h2>Welcome, <span id="username"></span> 👋</h2>
+    <p><strong>Points:</strong> <span id="points">0</span></p>
+    <p><strong>Tokens:</strong> <span id="tokens">0</span></p>
+
+    <div id="referral-section">
+      <h3>👥 Referral</h3>
+      <p>Share your referral link:</p>
+      <input id="referral-link" type="text" readonly onclick="this.select()">
+      <p>Referrals: <span id="referral-count">0</span></p>
+    </div>
+
+    <div id="topup-section">
+      <h3>💳 Top-Up Request</h3>
+      <input id="topup-amount" type="number" placeholder="Enter amount of points to request">
+      <input id="topup-note" type="text" placeholder="Reason or note (e.g., paid via crypto)">
+      <button onclick="submitTopUpRequest()">📩 Submit Request</button>
+    </div>
+
+    <div id="follow-list">
+      <h3>🔗 Follow to Earn</h3>
+      <!-- Twitter links here -->
+    </div>
+
+    <div id="leaderboard">
+      <h3>🏆 Top Users</h3>
+      <!-- Leaderboard filled by Firestore -->
+    </div>
+  </div>
+
+  <footer>
+    <p>📢 Join our Telegram: <a href="https://t.me/earnsocialboost" target="_blank">@earnsocialboost</a></p>
+  </footer>
 </body>
 </html>
