@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Earn Social Boost</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="admin.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <h2>🛠️ Admin Panel</h2>
+    <button onclick="logout()">Log Out</button>
+  </div>
+
+  <div id="auth">
+    <h3>🔐 Login as Admin</h3>
+    <button onclick="adminLogin()">Login with Google</button>
+  </div>
+
+  <div id="panel" style="display:none">
+    <h3>📋 Pending Top-Up Requests</h3>
+    <div id="requests"></div>
+  </div>
+</body>
+</html>
