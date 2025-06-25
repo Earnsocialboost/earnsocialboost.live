@@ -2,7 +2,7 @@
 
 **Earn Social Boost** is a token-based social engagement platform where users earn points by following Twitter users and completing tasks. Points are converted to tokens, which can then be exchanged for real Twitter followers.
 
-🔗 Live Site: [https://earnsocialboost.github.io/earnsocialboost.free/](https://earnsocialboost.github.io/earnsocialboost.free/)
+🔗 Live Site: [https://earnsocialboost.github.io/earnsocialboost.free/](https://earnsocialboost.github.io/earnsocialboost.live/)
 
 ---
 
