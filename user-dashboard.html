@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Users - Admin View</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="user-dashboard.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <h2>📊 All Users Dashboard</h2>
+    <button onclick="logout()">Log Out</button>
+  </div>
+
+  <div id="auth">
+    <h3>🔐 Login as Admin</h3>
+    <button onclick="adminLogin()">Login with Google</button>
+  </div>
+
+  <div id="panel" style="display:none">
+    <h3>👥 Registered Users</h3>
+    <div id="users"></div>
+  </div>
+</body>
+</html>
